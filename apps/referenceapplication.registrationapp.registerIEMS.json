@@ -32,7 +32,7 @@
         "id": "demographics",
         "questions": [
           {
-            "legend": "Additional",
+            "legend": "SSN",
             "fields": [
               {
                 "type": "personAttribute",
