@@ -8,7 +8,7 @@
       "id": "referenceapplication.registrationapp.registerPatient.homepageLink",
       "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
       "type": "link",
-      "label": "Register IEMS",
+      "label": "referenceapplication.app.registerPatient.label",
       "url": "registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.registerIEMS",
       "icon": "icon-user",
       "order": 1,
