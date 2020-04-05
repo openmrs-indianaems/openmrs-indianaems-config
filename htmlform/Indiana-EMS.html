@@ -1,11 +1,11 @@
-<htmlform formUuid="d2c7532c-fb01-11e2-8ff2-fd54ab5fd111" formName="Indiana EMS (v0.1)">
+<htmlform formUuid="d2c7532c-fb01-11e2-8ff2-fd54ab5fd111" formName="Indiana EMS (v0.4)">
     <macros>
         headerColor = #009d8e
         fontOnHeaderColor = white
     </macros>
-	
 <!-- Change Notes: Started on 4/4/2020
-04-Apr-2020 (Jeff W.) 		added "Unknown" to SARS-CoV-2 result:
+04-Apr-2020 (Jeff W.) 		Added "Unknown" choice to SARS-CoV-2 result:
+05-Apr-2020 (Jeff W.) 		Fixed alignment of Radio and Checkboxes labels using CSS: section-container
 
 -->
     <style>
@@ -27,8 +27,23 @@
         table.baseline-aligned td {
             vertical-align: baseline;
         }
+
+       .section-container {
+           /* background: #F2F2F2;
+           box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+           padding: 10px 5px 10px 15px;
+           line-height: 1.5em; /*add this for vertical spacing between elements*/
+        }
+        .section-container input[type="checkbox"] {
+           margin: 0px 5px; /*changed values to vertical, horizontal*/
+           top:2px; /*added to offset the checkbox position to line up*/
+        }
+       .section-container label { /*new definition to override labels inside section-containers*/
+           margin: 0px;
+        }
+
     </style>
-	<h2>IN EMS SARS-CoV-2 Encounter Form 0.3</h2>
+	<h2>IN EMS SARS-CoV-2 Encounter Form 0.4 (updated 4/5/20)</h2>
 
 <!-- Leaving out encounter details (might need to re-introduce if they want to do retrospective entry)
 	<section headerLabel="Encounter Details">
@@ -50,6 +65,8 @@
 -->
 
        <section headerLabel="History">
+          <div class="section-container">
+
 		<table class="baseline-aligned">
 			<tr>
 				<td>SARS-CoV-2 test collection date:</td>
@@ -57,10 +74,10 @@
 			</tr>
 			<tr>
 				<td>SARS-CoV-2 result:</td>
-				<td><obs style="radio" conceptId="165859" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="+,-,?"/></td>
+				<td><obs style="radio" conceptId="165859" answerSeparator="" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="+,-,Unknown"/></td>
 			</tr>
 			<tr>
-				<td>Is the patient a: </td>
+				<td>Is the Patient a: </td>
 				<td> 
 				  <obs conceptId="165862" answerConceptId="159465" answerLabel="student"/>
 				  <obs conceptId="165862" answerConceptId="5619" answerLabel="healthcare worker"/>
@@ -76,7 +93,7 @@
 			</tr>
 			<tr>
 				<td>Smoking History: </td>
-				<td><obs style="radio" conceptId="163201" answerConceptIds="152722,152807,163198" answerLabels="Current Smoker, Former Smoker, Non-smoker"/></td>
+				<td><obs style="radio" conceptId="163201" answerSeparator="" answerConceptIds="152722,152807,163198" answerLabels="Current Smoker, Former Smoker, Non-smoker"/></td>
 			</tr>
 			<tr>
 				<td># of days SARS-CoV-2 symptoms have been present:</td>
@@ -109,130 +126,139 @@
 				</td>
 			</tr>
 		</table>
-                
-       </section>
-       	<section headerLabel="Current Symptoms:">
-		<table class="baseline-aligned">
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="5226" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="5226" answerLabel="-"/></td>
-				<td>General Weakness</td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="140238" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="140238" answerLabel="-"/></td>
-				<td>Fever</td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="140471" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="140471" answerLabel="-"/></td>
-				<td>Subjective Fever </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="871" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="871" answerLabel="-"/></td>
-				<td>Chills </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="121" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="121" answerLabel="-"/></td>
-				<td>Muscle Aches / Myalgias </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="165501" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="165501" answerLabel="-"/></td>
-				<td>Runny Nose </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="158843" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="158843" answerLabel="-"/></td>
-				<td>Sore Throat </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="143264" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="143264" answerLabel="-"/></td>
-				<td>Cough </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="141600" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="141600" answerLabel="-"/></td>
-				<td>Shortness of Breath </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="120749" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="120749" answerLabel="-"/></td>
-				<td>Chest Pain </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="139084" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="139084" answerLabel="-"/></td>
-				<td>Headache </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="133473" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="133473" answerLabel="-"/></td>
-				<td>Nausea / Vomiting </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="142412" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="142412" answerLabel="-"/></td>
-				<td>Diarrhea </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="151" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="151" answerLabel="-"/></td>
-				<td>Abdominal Pain </td>
-			</tr>
-			<tr>
-				<td><obs conceptId="165864" answerConceptId="5622" answerLabel="+"/></td>
-				<td><obs conceptId="165865" answerConceptId="5622" answerLabel="-"/></td>
-				<td>Other (specify below) </td>
-			</tr>
-		</table>
-		<table class="baseline-aligned">
-			<tr>
-				<td>Other Symptoms (describe) </td>
-				<td> 
-                       <obs conceptId="162144" rows="4" cols="50"/> 
-				</td>
-			</tr>
-		</table>
-	</section>
+            </div>               
+        </section>
+
+	<section headerLabel="Current Symptoms:">
+		<div class="section-container">
+			<table class="baseline-aligned">
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="5226" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="5226" answerLabel="-"/></td>
+					<td>General Weakness</td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="140238" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="140238" answerLabel="-"/></td>
+					<td>Fever</td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="140471" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="140471" answerLabel="-"/></td>
+					<td>Subjective Fever </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="871" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="871" answerLabel="-"/></td>
+					<td>Chills </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="121" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="121" answerLabel="-"/></td>
+					<td>Muscle Aches / Myalgias </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="165501" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="165501" answerLabel="-"/></td>
+					<td>Runny Nose </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="158843" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="158843" answerLabel="-"/></td>
+					<td>Sore Throat </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="143264" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="143264" answerLabel="-"/></td>
+					<td>Cough </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="141600" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="141600" answerLabel="-"/></td>
+					<td>Shortness of Breath </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="120749" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="120749" answerLabel="-"/></td>
+					<td>Chest Pain </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="139084" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="139084" answerLabel="-"/></td>
+					<td>Headache </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="133473" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="133473" answerLabel="-"/></td>
+					<td>Nausea / Vomiting </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="142412" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="142412" answerLabel="-"/></td>
+					<td>Diarrhea </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="151" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="151" answerLabel="-"/></td>
+					<td>Abdominal Pain </td>
+				</tr>
+				<tr>
+					<td><obs conceptId="165864" answerConceptId="5622" answerLabel="+"/></td>
+					<td><obs conceptId="165865" answerConceptId="5622" answerLabel="-"/></td>
+					<td>Other (specify below) </td>
+				</tr>
+			</table>
+			<table class="baseline-aligned">
+				<tr>
+					<td>Other Symptoms (describe) </td>
+					<td> 
+						   <obs conceptId="162144" rows="4" cols="50"/> 
+					</td>
+				</tr>
+			</table>
+		</div>
+		</section>
+
+
 	<section headerLabel="Encounter Details">
-		<table class="baseline-aligned">
-			<tr>
-				<td>Physical Exam: </td>
-				<td> 
-                        <obs conceptId="165866" answerConceptId="1115" answerLabel="Normal"/>
-                        <obs conceptId="165866" answerConceptId="130305" answerLabel="Pharyngeal Exudate"/>
-                        <obs conceptId="165866" answerConceptId="517" answerLabel="Conjunctival Injection"/>
-                        <obs conceptId="165866" answerConceptId="122496" answerLabel="Dyspnea"/>
-                        <obs conceptId="165866" answerConceptId="125061" answerLabel="Tachypnea"/>
-                        <obs conceptId="165866" answerConceptId="150876" answerLabel="Abnormal Lung Auscultation"/>
-				</td>
-			</tr>
-		</table>
+		<div class="section-container">
+			<table class="baseline-aligned">
+				<tr>
+					<td>Physical Exam: </td>
+					<td> 
+							<obs conceptId="165866" answerConceptId="1115" answerLabel="Normal"/>
+							<obs conceptId="165866" answerConceptId="130305" answerLabel="Pharyngeal Exudate"/>
+							<obs conceptId="165866" answerConceptId="517" answerLabel="Conjunctival Injection"/>
+							<obs conceptId="165866" answerConceptId="122496" answerLabel="Dyspnea"/>
+							<obs conceptId="165866" answerConceptId="125061" answerLabel="Tachypnea"/>
+							<obs conceptId="165866" answerConceptId="150876" answerLabel="Abnormal Lung Auscultation"/>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</section>
 
-<section headerLabel="Medications and Treatments Provided:">
-		<table class="baseline-aligned">
-			<tr>
-				<td> 
-                        <obs conceptId="159369" answerConceptId="162738" answerLabel="Oxygen therapy administered "/>
-                        <obs conceptId="159369" answerConceptId="1765" answerLabel="IV Fluids"/>
-                        <obs conceptId="159369" answerConceptId="77897" answerLabel="Ibuprofen"/>
-                        <obs conceptId="159369" answerConceptId="81073" answerLabel="Zofran"/>
-				</td>
-			</tr>
-			<tr>
-				<td>Other (specify) 
-                       <obs conceptId="165861" rows="4" cols="50"/> 
-				</td>
-			</tr>
-		</table>
+	<section headerLabel="Medications and Treatments Provided:">
+		<div class="section-container">
+			<table class="baseline-aligned">
+				<tr>
+					<td> 
+							<obs conceptId="159369" answerConceptId="162738" answerLabel="Oxygen therapy administered "/>
+							<obs conceptId="159369" answerConceptId="1765" answerLabel="IV Fluids"/>
+							<obs conceptId="159369" answerConceptId="77897" answerLabel="Ibuprofen"/>
+							<obs conceptId="159369" answerConceptId="81073" answerLabel="Zofran"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Other (specify) 
+						   <obs conceptId="165861" rows="4" cols="50"/> 
+					</td>
+				</tr>
+			</table>
+		</div>
 	</section>
 
-<section headerLabel="Disposition: ">
+	<section headerLabel="Disposition: ">
 		<table class="baseline-aligned">
 			<tr>
 				<td>Diagnoses: </td>
@@ -243,7 +269,7 @@
 			<tr>
 				<td>Transfer location: </td>
 				<td>
-                       <obs conceptId="165909" /> 
+					<obs conceptId="165909" /> 
 				</td>
 			</tr>
 		</table>
