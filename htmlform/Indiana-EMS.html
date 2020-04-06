@@ -1,4 +1,4 @@
-<htmlform formUuid="d2c7532c-fb01-11e2-8ff2-fd54ab5fd111" formName="Indiana EMS (v0.5)">
+<htmlform formUuid="d2c7532c-fb01-11e2-8ff2-fd54ab5fd111" formName="Indiana EMS (v0.4)">
     <macros>
         headerColor = #009d8e
         fontOnHeaderColor = white
@@ -6,8 +6,7 @@
 <!-- Change Notes: Started on 4/4/2020
 04-Apr-2020 (Jeff W.) 		Added "Unknown" choice to SARS-CoV-2 result:
 05-Apr-2020 (Jeff W.) 		Fixed alignment of Radio and Checkboxes labels using CSS: section-container
-06-Apr-2020 (Joe A.)            Aligned with Encounter Form 0.5
-06-Apr-2020 (Maurya K.)     Added the encounter date
+06-Apr-2020 (Joe A.)            Aligned with Encounter Form 0.6
 
 -->
     <style>
@@ -45,17 +44,8 @@
         }
 
     </style>
-	<h2>IN EMS SARS-CoV-2 Encounter Form 0.5 (updated 4/6/20)</h2>
-	<section headerLabel="Encounter Details">
-		<table class="baseline-aligned">
-			<tr>
-				<td>Date:</td>
-				<td><encounterDate default="today"/></td>
-			</tr>
-		</table>
-	</section>
+	<h2>IN EMS SARS-CoV-2 Encounter Form 0.6 (updated 4/6/20)</h2>
 
-<!-- Leaving out encounter details (might need to re-introduce if they want to do retrospective entry)
 	<section headerLabel="Encounter Details">
 		<table class="baseline-aligned">
 			<tr>
@@ -72,7 +62,7 @@
 			</tr>
 		</table>
 	</section>
--->
+
 
        <section headerLabel="History">
           <div class="section-container">
@@ -264,6 +254,14 @@
 					<td>Specify Abnormality</td>
 				</tr>
 				<tr>
+					<td>General</td>
+					<td><obs conceptId="1119" answerConceptId="1115" answerLabel=""/></td>
+                                        <td><obs conceptId="1119" answerConceptId="1116" answerLabel=""/></td>
+					<td> 
+						   <obs conceptId="163042" rows="1" cols="50"/> 
+					</td>
+				</tr>
+				<tr>
 					<td>HEENT</td>
 					<td><obs conceptId="1122" answerConceptId="1115" answerLabel=""/></td>
                                         <td><obs conceptId="1122" answerConceptId="1116" answerLabel=""/></td>
@@ -295,7 +293,22 @@
 						   <obs conceptId="163046" rows="1" cols="50"/> 
 					</td>
 				</tr>
-
+				<tr>
+					<td>Extremity</td>
+					<td><obs conceptId="1127" answerConceptId="1115" answerLabel=""/></td>
+                                        <td><obs conceptId="1127" answerConceptId="1116" answerLabel=""/></td>
+					<td> 
+						   <obs conceptId="165911" rows="1" cols="50"/> 
+					</td>
+				</tr>
+				<tr>
+					<td>Neurologic</td>
+					<td><obs conceptId="1129" answerConceptId="1115" answerLabel=""/></td>
+                                        <td><obs conceptId="1129" answerConceptId="1116" answerLabel=""/></td>
+					<td> 
+						   <obs conceptId="165912" rows="1" cols="50"/> 
+					</td>
+				</tr>
 			</table>
 		</div>
 		</section>
