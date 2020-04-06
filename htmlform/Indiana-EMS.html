@@ -7,6 +7,7 @@
 04-Apr-2020 (Jeff W.) 		Added "Unknown" choice to SARS-CoV-2 result:
 05-Apr-2020 (Jeff W.) 		Fixed alignment of Radio and Checkboxes labels using CSS: section-container
 06-Apr-2020 (Joe A.)            Aligned with Encounter Form 0.5
+06-Apr-2020 (Maurya K.)     Added the encounter date
 
 -->
     <style>
@@ -45,6 +46,14 @@
 
     </style>
 	<h2>IN EMS SARS-CoV-2 Encounter Form 0.5 (updated 4/6/20)</h2>
+	<section headerLabel="Encounter Details">
+		<table class="baseline-aligned">
+			<tr>
+				<td>Date:</td>
+				<td><encounterDate default="today"/></td>
+			</tr>
+		</table>
+	</section>
 
 <!-- Leaving out encounter details (might need to re-introduce if they want to do retrospective entry)
 	<section headerLabel="Encounter Details">
