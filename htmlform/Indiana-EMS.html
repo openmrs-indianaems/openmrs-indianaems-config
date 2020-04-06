@@ -1,4 +1,4 @@
-<htmlform formUuid="d2c7532c-fb01-11e2-8ff2-fd54ab5fd111" formName="Indiana EMS (v0.4)">
+<htmlform formUuid="d2c7532c-fb01-11e2-8ff2-fd54ab5fd111" formName="Indiana EMS (v0.5)">
     <macros>
         headerColor = #009d8e
         fontOnHeaderColor = white
@@ -6,6 +6,7 @@
 <!-- Change Notes: Started on 4/4/2020
 04-Apr-2020 (Jeff W.) 		Added "Unknown" choice to SARS-CoV-2 result:
 05-Apr-2020 (Jeff W.) 		Fixed alignment of Radio and Checkboxes labels using CSS: section-container
+06-Apr-2020 (Joe A.)            Aligned with Encounter Form 0.5
 
 -->
     <style>
@@ -43,7 +44,7 @@
         }
 
     </style>
-	<h2>IN EMS SARS-CoV-2 Encounter Form 0.4 (updated 4/5/20)</h2>
+	<h2>IN EMS SARS-CoV-2 Encounter Form 0.5 (updated 4/6/20)</h2>
 
 <!-- Leaving out encounter details (might need to re-introduce if they want to do retrospective entry)
 	<section headerLabel="Encounter Details">
@@ -68,6 +69,10 @@
           <div class="section-container">
 
 		<table class="baseline-aligned">
+		        <tr>
+				<td>Tested for SARS-CoV-2:</td>
+				<td><obs style="radio" conceptId="165910" answerSeparator="" answerConceptIds="CIEL:1065,CIEL:1066,CIEL:1067" answerLabels="+,-,Unknown"/></td>
+			</tr>
 			<tr>
 				<td>SARS-CoV-2 test collection date:</td>
 				<td><obs conceptId="CIEL:159951" allowTime="false" default="now"/></td>
@@ -220,7 +225,8 @@
 		</section>
 
 
-	<section headerLabel="Encounter Details">
+<!-- Exchanging this section with the new format (See below)
+ 	<section headerLabel="Encounter Details">
 		<div class="section-container">
 			<table class="baseline-aligned">
 				<tr>
@@ -237,14 +243,61 @@
 			</table>
 		</div>
 	</section>
+-->
 
+	<section headerLabel="Physical Exam:">
+		<div class="section-container">
+			<table class="baseline-aligned">
+				<tr>
+					<td></td>
+					<td>Normal</td>
+                                        <td>Abnormal</td>
+					<td>Specify Abnormality</td>
+				</tr>
+				<tr>
+					<td>HEENT</td>
+					<td><obs conceptId="1122" answerConceptId="1115" answerLabel=""/></td>
+                                        <td><obs conceptId="1122" answerConceptId="1116" answerLabel=""/></td>
+					<td> 
+						   <obs conceptId="163045" rows="1" cols="50"/> 
+					</td>
+				</tr>
+				<tr>
+					<td>Pulmonary</td>
+					<td><obs conceptId="1123" answerConceptId="1115" answerLabel=""/></td>
+                                        <td><obs conceptId="1123" answerConceptId="1116" answerLabel=""/></td>
+					<td> 
+						   <obs conceptId="160689" rows="1" cols="50"/> 
+					</td>
+				</tr>
+				<tr>
+					<td>Abdomen</td>
+					<td><obs conceptId="1125" answerConceptId="1115" answerLabel=""/></td>
+                                        <td><obs conceptId="1125" answerConceptId="1116" answerLabel=""/></td>
+					<td> 
+						   <obs conceptId="160947" rows="1" cols="50"/> 
+					</td>
+				</tr>
+				<tr>
+					<td>Cardiovascular</td>
+					<td><obs conceptId="1124" answerConceptId="1115" answerLabel=""/></td>
+                                        <td><obs conceptId="1124" answerConceptId="1116" answerLabel=""/></td>
+					<td> 
+						   <obs conceptId="163046" rows="1" cols="50"/> 
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		</section>
 	<section headerLabel="Medications and Treatments Provided:">
 		<div class="section-container">
 			<table class="baseline-aligned">
 				<tr>
 					<td> 
-							<obs conceptId="159369" answerConceptId="162738" answerLabel="Oxygen therapy administered "/>
-							<obs conceptId="159369" answerConceptId="1765" answerLabel="IV Fluids"/>
+							<obs conceptId="162739" answerConceptId="162738" answerLabel="Oxygen therapy administered "/>
+							<obs conceptId="1767" answerConceptId="1765" answerLabel="IV Fluids"/>
+							<obs conceptId="159369" answerConceptId="70116" answerLabel="Acetaminophen"/>
 							<obs conceptId="159369" answerConceptId="77897" answerLabel="Ibuprofen"/>
 							<obs conceptId="159369" answerConceptId="81073" answerLabel="Zofran"/>
 					</td>
@@ -266,12 +319,23 @@
                        <obs conceptId="1642" style="autocomplete" answerClasses="Diagnosis"/> 
 				</td>
 			</tr>
+		        <tr>
+				<td>Discharge:</td>
+				<td><obs style="radio" conceptId="1695" answerSeparator="" answerConceptIds="CIEL:1692,CIEL:1693,CIEL:1694,CIEL:5622" answerLabels="Discharge home,Transfer,Discharge against medical advice (AMA),Other (Specify)"/></td>
+			</tr>
 			<tr>
-				<td>Transfer location: </td>
+ 				<td>Transfer location: </td>
 				<td>
 					<obs conceptId="165909" /> 
 				</td>
 			</tr>
+			<tr>
+ 				<td>Other Discharge: </td>
+				<td>
+					<obs conceptId="165869" /> 
+				</td>
+			</tr>
+
 		</table>
 	</section>
 
