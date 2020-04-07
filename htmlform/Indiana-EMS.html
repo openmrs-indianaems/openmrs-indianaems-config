@@ -7,6 +7,7 @@
 04-Apr-2020 (Jeff W.) 		Added "Unknown" choice to SARS-CoV-2 result:
 05-Apr-2020 (Jeff W.) 		Fixed alignment of Radio and Checkboxes labels using CSS: section-container
 06-Apr-2020 (Joe A.)            Aligned with Encounter Form 0.6
+07-Apr-2020 (Joe A.)		Changes Symptoms section to Radio button format
 
 -->
     <style>
@@ -136,80 +137,68 @@
 	<section headerLabel="Current Symptoms:">
 		<div class="section-container">
 			<table class="baseline-aligned">
+
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="5226" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="5226" answerLabel="-"/></td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="5226" conceptLabels="+,-" labelText=""/></td>
 					<td>General Weakness</td>
 				</tr>
+				
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="140238" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="140238" answerLabel="-"/></td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="140238" conceptLabels="+,-" labelText=""/></td>
 					<td>Fever</td>
 				</tr>
+				
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="140471" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="140471" answerLabel="-"/></td>
-					<td>Subjective Fever </td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="140471" conceptLabels="+,-" labelText=""/></td>
+					<td>Subjective Fever</td>
+				</tr>										
+				<tr>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="871" conceptLabels="+,-" labelText=""/></td>
+					<td>Chills</td>
+				</tr>					
+				<tr>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="121" conceptLabels="+,-" labelText=""/></td>
+					<td>Muscle Aches / Myalgias</td>
+				</tr>	
+				<tr>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="165501" conceptLabels="+,-" labelText=""/></td>
+					<td>Runny Nose</td>
+				</tr>	
+				<tr>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="158843" conceptLabels="+,-" labelText=""/></td>
+					<td>Sore Throat</td>
+				</tr>	
+				<tr>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="143264" conceptLabels="+,-" labelText=""/></td>
+					<td>Cough</td>
 				</tr>
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="871" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="871" answerLabel="-"/></td>
-					<td>Chills </td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="141600" conceptLabels="+,-" labelText=""/></td>
+					<td>Shortness of Breath</td>
 				</tr>
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="121" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="121" answerLabel="-"/></td>
-					<td>Muscle Aches / Myalgias </td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="120749" conceptLabels="+,-" labelText=""/></td>
+					<td>Chest Pain</td>
 				</tr>
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="165501" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="165501" answerLabel="-"/></td>
-					<td>Runny Nose </td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="139084" conceptLabels="+,-" labelText=""/></td>
+					<td>Headache</td>
 				</tr>
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="158843" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="158843" answerLabel="-"/></td>
-					<td>Sore Throat </td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="133473" conceptLabels="+,-" labelText=""/></td>
+					<td>Nausea / Vomiting</td>
 				</tr>
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="143264" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="143264" answerLabel="-"/></td>
-					<td>Cough </td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="142412" conceptLabels="+,-" labelText=""/></td>
+					<td>Diarrhea</td>
 				</tr>
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="141600" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="141600" answerLabel="-"/></td>
-					<td>Shortness of Breath </td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="151" conceptLabels="+,-" labelText=""/></td>
+					<td>Abdominal Pain</td>
 				</tr>
 				<tr>
-					<td><obs conceptId="165864" answerConceptId="120749" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="120749" answerLabel="-"/></td>
-					<td>Chest Pain </td>
-				</tr>
-				<tr>
-					<td><obs conceptId="165864" answerConceptId="139084" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="139084" answerLabel="-"/></td>
-					<td>Headache </td>
-				</tr>
-				<tr>
-					<td><obs conceptId="165864" answerConceptId="133473" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="133473" answerLabel="-"/></td>
-					<td>Nausea / Vomiting </td>
-				</tr>
-				<tr>
-					<td><obs conceptId="165864" answerConceptId="142412" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="142412" answerLabel="-"/></td>
-					<td>Diarrhea </td>
-				</tr>
-				<tr>
-					<td><obs conceptId="165864" answerConceptId="151" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="151" answerLabel="-"/></td>
-					<td>Abdominal Pain </td>
-				</tr>
-				<tr>
-					<td><obs conceptId="165864" answerConceptId="5622" answerLabel="+"/></td>
-					<td><obs conceptId="165865" answerConceptId="5622" answerLabel="-"/></td>
-					<td>Other (specify below) </td>
+					<td><obs style="radio" conceptIds="165864,165865" answerConceptId="5622" conceptLabels="+,-" labelText=""/></td>
+					<td>Other (specify below)</td>
 				</tr>
 			</table>
 			<table class="baseline-aligned">
