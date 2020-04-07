@@ -7,7 +7,7 @@
 04-Apr-2020 (Jeff W.) 		Added "Unknown" choice to SARS-CoV-2 result:
 05-Apr-2020 (Jeff W.) 		Fixed alignment of Radio and Checkboxes labels using CSS: section-container
 06-Apr-2020 (Joe A.)            Aligned with Encounter Form 0.6
-07-Apr-2020 (Joe A.)		Changes Symptoms section to Radio button format
+07-Apr-2020 (Joe A.)		Changes Symptoms and Physical Exam section to Radio button format
 
 -->
     <style>
@@ -238,65 +238,43 @@
 			<table class="baseline-aligned">
 				<tr>
 					<td></td>
-					<td>Normal</td>
-                                        <td>Abnormal</td>
+					<td></td>
 					<td>Specify Abnormality</td>
 				</tr>
 				<tr>
 					<td>General</td>
-					<td><obs conceptId="1119" answerConceptId="1115" answerLabel=""/></td>
-                                        <td><obs conceptId="1119" answerConceptId="1116" answerLabel=""/></td>
-					<td> 
-						   <obs conceptId="163042" rows="1" cols="50"/> 
-					</td>
-				</tr>
+					<td><obs conceptId="1119" answerConceptIds="1115,1116" answerLabel="Normal,Abnormal" style="radio" answerSeparator=""/></td>
+					<td> <obs conceptId="163042" rows="1" cols="50"/> </td>
+				</tr>				
 				<tr>
 					<td>HEENT</td>
-					<td><obs conceptId="1122" answerConceptId="1115" answerLabel=""/></td>
-                                        <td><obs conceptId="1122" answerConceptId="1116" answerLabel=""/></td>
-					<td> 
-						   <obs conceptId="163045" rows="1" cols="50"/> 
-					</td>
-				</tr>
+					<td><obs conceptId="1122" answerConceptIds="1115,1116" answerLabel="Normal,Abnormal" style="radio" answerSeparator=""/></td>
+					<td> <obs conceptId="163045" rows="1" cols="50"/> </td>
+				</tr>				
 				<tr>
 					<td>Pulmonary</td>
-					<td><obs conceptId="1123" answerConceptId="1115" answerLabel=""/></td>
-                                        <td><obs conceptId="1123" answerConceptId="1116" answerLabel=""/></td>
-					<td> 
-						   <obs conceptId="160689" rows="1" cols="50"/> 
-					</td>
-				</tr>
+					<td><obs conceptId="1123" answerConceptIds="1115,1116" answerLabel="Normal,Abnormal" style="radio" answerSeparator=""/></td>
+					<td> <obs conceptId="160689" rows="1" cols="50"/> </td>
+				</tr>				
 				<tr>
 					<td>Abdomen</td>
-					<td><obs conceptId="1125" answerConceptId="1115" answerLabel=""/></td>
-                                        <td><obs conceptId="1125" answerConceptId="1116" answerLabel=""/></td>
-					<td> 
-						   <obs conceptId="160947" rows="1" cols="50"/> 
-					</td>
-				</tr>
+					<td><obs conceptId="1125" answerConceptIds="1115,1116" answerLabel="Normal,Abnormal" style="radio" answerSeparator=""/></td>
+					<td> <obs conceptId="160947" rows="1" cols="50"/> </td>
+				</tr>				
 				<tr>
 					<td>Cardiovascular</td>
-					<td><obs conceptId="1124" answerConceptId="1115" answerLabel=""/></td>
-                                        <td><obs conceptId="1124" answerConceptId="1116" answerLabel=""/></td>
-					<td> 
-						   <obs conceptId="163046" rows="1" cols="50"/> 
-					</td>
+					<td><obs conceptId="1124" answerConceptIds="1115,1116" answerLabel="Normal,Abnormal" style="radio" answerSeparator=""/></td>
+					<td> <obs conceptId="163046" rows="1" cols="50"/> </td>
 				</tr>
 				<tr>
 					<td>Extremity</td>
-					<td><obs conceptId="1127" answerConceptId="1115" answerLabel=""/></td>
-                                        <td><obs conceptId="1127" answerConceptId="1116" answerLabel=""/></td>
-					<td> 
-						   <obs conceptId="165911" rows="1" cols="50"/> 
-					</td>
+					<td><obs conceptId="1127" answerConceptIds="1115,1116" answerLabel="Normal,Abnormal" style="radio" answerSeparator=""/></td>
+					<td> <obs conceptId="165911" rows="1" cols="50"/> </td>
 				</tr>
 				<tr>
 					<td>Neurologic</td>
-					<td><obs conceptId="1129" answerConceptId="1115" answerLabel=""/></td>
-                                        <td><obs conceptId="1129" answerConceptId="1116" answerLabel=""/></td>
-					<td> 
-						   <obs conceptId="165912" rows="1" cols="50"/> 
-					</td>
+					<td><obs conceptId="1129" answerConceptIds="1115,1116" answerLabel="Normal,Abnormal" style="radio" answerSeparator=""/></td>
+					<td> <obs conceptId="165912" rows="1" cols="50"/> </td>
 				</tr>
 			</table>
 		</div>
