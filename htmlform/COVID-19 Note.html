@@ -364,8 +364,10 @@
 			</table>
 		</div>
 	</section>
-	<div id="buttons">
-            <submit submitClass="confirm right" submitLabel="Submit Form"/>
-            <button type="button" class="cancel"><uimessage code="general.cancel"/></button>
-	</div>
+	<ifMode mode="VIEW" include="false">	
+		<div id="buttons">
+		    <submit submitClass="confirm right" submitLabel="Submit Form"/>
+		    <button type="button" class="cancel"><uimessage code="general.cancel"/></button>
+		</div>
+	</ifMode>
 </htmlform>
