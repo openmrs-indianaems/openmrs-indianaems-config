@@ -45,7 +45,7 @@
         }
 
     </style>
-	<h2>IN EMS SARS-CoV-2 Encounter Form 0.6 (updated 4/6/20)</h2>
+	<h2>IN EMS SARS-CoV-2 Encounter Form 0.7 (updated 4/13/20)</h2>
 
 	<section headerLabel="Encounter Details">
 		<table class="baseline-aligned">
@@ -67,7 +67,6 @@
 
        <section headerLabel="History">
           <div class="section-container">
-
 		<table class="baseline-aligned">
 		        <tr>
 				<td>Tested for SARS-CoV-2:</td>
@@ -104,27 +103,54 @@
 				<td># of days SARS-CoV-2 symptoms have been present:</td>
 				<td><obs conceptId="06af6a7b-60c9-46a2-8a4c-189fa675bb90"/></td>
 			</tr>
+		</table>
+            </div>               
+        </section>
+			
+       <section headerLabel="Current Health Problems">
+          <div class="section-container">
+
+		<table class="baseline-aligned">		
 			<tr>
-				<td>Current Health Problems: </td>
-				<td> 
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:117277" answerLabel="Immunocompromised"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:119481" answerLabel="Diabetes"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:6032" answerLabel="Liver Disease"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:6033" answerLabel="Renal Disease"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:165646" answerLabel="Chronic Neuro Disease"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:116031" answerLabel="Cancer"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:121375" answerLabel="Asthma"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:155569" answerLabel="Chronic Lung Dz"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:119270" answerLabel="Cardiovascular Disease"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:5016" answerLabel="Cardiomyopathy"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:117399" answerLabel="Hypertension"/>
-			<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:1295" answerLabel="COPD"/>
-			<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:111103" answerLabel="Stroke"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:155" answerLabel="Epilepsy"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:134337" answerLabel="Mental Health Disorder"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:145439" answerLabel="Misc Chronic Disease"/>
-                        <obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:5622" answerLabel="Other"/>
+				<td>Neurologic Disease</td>
+				<td>
+					<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:111103" answerLabel="Stroke"/>
+                      			<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:155" answerLabel="Epilepsy"/>
 				</td>
+			</tr>
+			<tr>
+				<td>Cardiac Disease</td>
+				<td>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:117399" answerLabel="Hypertension"/>
+                       			<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:119270" answerLabel="Cardiovascular Disease"/>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:5016" answerLabel="Cardiomyopathy"/>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:119910" answerLabel="Congestive Heart Failure"/>					
+				</td>
+			</tr>
+			<tr>
+				<td>Respiratory Disease</td>
+				<td>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:121375" answerLabel="Asthma"/>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:155569" answerLabel="Chronic Lung Dz"/>
+					<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:1295" answerLabel="COPD"/>					
+				</td>
+			</tr>
+			<tr>
+				<td>Immunological Disease</td>
+				<td>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:117277" answerLabel="Immunocompromised"/>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:119481" answerLabel="Diabetes"/>
+					<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:116031" answerLabel="Cancer"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Other</td>
+				<td>
+                       			<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:6032" answerLabel="Liver Disease"/>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:6033" answerLabel="Renal Disease"/>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:134337" answerLabel="Mental Health Disorder"/>
+                        		<obs conceptId="f3f0fdd4-632d-4998-9637-1a32c02a4512" answerConceptId="CIEL:5622" answerLabel="Other"/>
+				</td>	
 			</tr>
 			<tr>
 				<td>Other Health Problem(s): </td>
@@ -136,7 +162,7 @@
             </div>               
         </section>
 
-	<section headerLabel="Current Symptoms:">
+	<section headerLabel="Current Symptoms">
 		<div class="section-container">
 			<table class="baseline-aligned">
 				<tr>
@@ -247,7 +273,7 @@
 	</section>
 -->
 
-	<section headerLabel="Physical Exam:">
+	<section headerLabel="Physical Exam">
 		<div class="section-container">
 			<table class="baseline-aligned">
 				<tr>
@@ -316,7 +342,7 @@
 		</div>
 		</section>
 	
-	<section headerLabel="Medications and Treatments Provided:">
+	<section headerLabel="Medications and Treatments Provided">
 		<div class="section-container">
 			<table class="baseline-aligned">
 				<tr>
@@ -337,7 +363,7 @@
 		</div>
 	</section>
 
-	<section headerLabel="Disposition: ">
+	<section headerLabel="Disposition">
 		<div class="section-container">
 			<table class="baseline-aligned">
 				<tr>
